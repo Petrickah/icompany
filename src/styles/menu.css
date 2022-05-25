@@ -1,5 +1,5 @@
 .tesagon-logo {
-    width:7.5vw;
+    width:15vh;
 }
 
 .menu {
@@ -17,7 +17,7 @@
 }
 
 .menu-item {
-    font-size: 16pt;
+    font-size: 2vh;
     padding-left: 25px;
     font-weight: 600;
     color: #cfcfcf;
@@ -31,4 +31,33 @@
 
 .menu-item:hover {
     color:#aaaaaa
+}
+
+@media screen and (max-width: 600px) {
+    .tesagon-logo {
+        width:12vh;
+    }
+    .menu-item {
+        font-size: 2.5vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        align-items: center;
+        justify-content: center;
+        display: block;
+        margin-left: 6vw;
+    }
+    .tesagon-logo {
+        margin-left: 30vw;
+        width:12vh;
+    }
+    .menu-item {
+        font-size: 2vh;
+    }
+    .menu-list {
+        display: block;
+        margin-left: auto;
+    }
 }
