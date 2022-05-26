@@ -5,10 +5,12 @@
 .menu {
     display: flex;
     margin-top: 2.5vh;
+    margin-left: 20vw;
+    margin-right: auto;
+    margin-bottom: 2.5vh;
     align-items: center;
     justify-content: center;
     width: 60vw;
-    margin-left: 20vw;
 }
 
 .menu-list {
