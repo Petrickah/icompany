@@ -4,6 +4,8 @@ import json
 import os
 
 app = Flask(__name__, static_folder='build')
+port = 5000
+
 url_search_api  = "https://webservicesp.anaf.ro/PlatitorTvaRest/api/v6/ws/tva"
 url_balance_api = "https://webservicesp.anaf.ro/bilant"
 
@@ -52,7 +54,7 @@ def search():
             return send_response({
                 "cod": data["cod"],
                 "message": data["message"],
-                "url": f"http://127.0.0.1:5000/api/v1/bilant?an={an}&cui={cui}",
+                "url": f"http://127.0.0.1:{port}/api/v1/bilant?an={an}&cui={cui}",
                 "date": {
                     "cui": found["cui"],
                     "data": found["data"],
@@ -78,4 +80,4 @@ def index(path):
         return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    app.run(port=80, use_reloader=True, threaded=True)
+    app.run(port=port, use_reloader=True, threaded=True)
