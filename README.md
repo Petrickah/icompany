@@ -1,7 +1,7 @@
 # iCompany - Platforma ce afișează date despre o firmă căutată după CUI
 
 Pentru a construi aplicația și a o încărca public este necasară rularea comenzii `npm run build` pentru a obține
-acces la folderul `build` folder ce va găzdui partea de frontend al aplicației
+acces la folderul `build`, folder ce va găzdui partea de frontend al aplicației
 
 Aceasta se foloseșe de un server `Flask` (Python) pentru a efectua cereri către API-ul ANAF și astfel pentru a putea
 prelua date despre o companie.
