@@ -1,3 +1,23 @@
+# iCompany - Platforma ce afișează date despre o firmă căutată după CUI
+
+Pentru a construi aplicația și a o încărca public este necasară rularea comenzii `npm run build` pentru a obține
+acces la folderul `build` folder ce va găzdui partea de frontend al aplicației
+
+Aceasta se foloseșe de un server `Flask` (Python) pentru a efectua cereri către API-ul ANAF și astfel pentru a putea
+prelua date despre o companie.
+
+Fără `Flask` aceasta nu va putea fi accesată deoarece se întorc erori de tipul `Cross Origin Policy Violation`
+deoarece cererile directe din browser către un server public sunt respinse implicit de browser prin faptul că răspunsul
+nu a venit de la serverul care găzduiește partea de frontend. Din acest motiv a fost necesară implementarea unui
+server `API` de tip `Proxy` care să găzduiască platforma.
+
+După rularea comenzii `npm run build`, pentru a putea testa pagina, se va rula serverul `Flask` folosind comanda `flask run`
+pe un calculator/server care are `python v3.9` și `flask` instalate.
+
+Pentru a descărca ultimul release se va accesa din GitHub secțiunea `Releases`.
+
+Pentru codul sursă se face clone la repository și se va rula comanda `npm init` apoi `npm run build` și `flask run`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
