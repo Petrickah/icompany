@@ -45,7 +45,7 @@ function IndicatorEconomic(props) {
 }
 
 function CompanyBalance(props) {
-  if (props.balance != null) {
+  if (props.balance != null && props.balance.i != null) {
     var balance = props.balance;
     return (
       <div id="indicatori" className='App-Indicatori'>
@@ -60,6 +60,13 @@ function CompanyBalance(props) {
       </div>
     );
   }
+  var date = new Date();
+  var year = date.getFullYear();
+  return (
+    <div className='company-data'>
+      <p className='company-content' style={{color:'white'}}>Compania căutată nu a raportat balanță pe anul {year-1}!</p>
+    </div>
+  )
 }
 
 function CompanyData(props) {
